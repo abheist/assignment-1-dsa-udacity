@@ -1,0 +1,38 @@
+### task0.py
+
+- `O(1)`: we are directly fetching the records, it'll only run once with each input.
+
+### task1.py
+
+- `O(2n + 2)`: 
+  ```
+  - 2n: Depends on the input we provide to the function.and it'll loop 'n' times and having two rows inside loop, we can multiply 'n*2'.
+  - 2: we have 'return' statement and 'number=[]', add two with it.
+  ```
+- `O(n)`: **Final verison**, on a larger scale we can remove the addition and multipication of 2.
+
+### task2.py
+
+- `O(2n + 2)`: **getNumbers** as same as `task1.py`
+- `O(2n + 2)`: **get_total_time** loop over n with 2 lines inside it and other 2 lines in the function.
+- `O(2n + 2) + O(2n + 2)`: **Total**
+- `O(n)`: **Final verison**
+
+### task3.py
+
+- `O(2n + 2)`: **bangalore_calls** loop `n` times and having two rows inside loop, add two with it, as we have `return` and `bangalore_calls`.
+- `O(4n + 3) + O(n log n)`: **bangalore_** n-loop with 4 lines inside loop and other 3 lines + sorted() function on `return`.
+- `O(2n + 2)`: **area_calls** n-loops with 2 lines inside it and 2 lines in the function.
+- Total: `O(2n + 2) + O(4n + 2) + O(n log n) + O(2n + 2)`
+  `O(2n) + O(4n) + O(n log n) + O(2n)`: removed constants
+- `O(2n + 4n + 2n) + O(n log n)`: summing all up
+- `O(n log n)`: **Final verison** removed small constant and numbers as it does not affect in large iterations
+
+### task4.py
+
+- `O(4n+1)`: **texts_checks** since it'll loop over `n` times accoding to the data we provide and having 4 rows inside the loop, we are multiplying the the n with 4.
+- `O(2n + 1)`: **call_checks** same as above, but `2*n` because it've only 2 rows inside the loop.
+- `loop: O(n) + O(n log n)`: **last print loop** as it will loop over all the telemarketers and it is also sorting the list.
+- `O(4n + 1) + O(2n + 1) + O(n) + O(n log n)`: **Total**
+- `O(4n + 3n) + O(n log n)`: removed constants
+- `O(n log n)`: **Final verison**
