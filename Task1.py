@@ -33,7 +33,7 @@ def getNumbers(all_numbers):
 
 
 numbers = getNumbers(data_)
-numbers = set(numbers)
+numbers = list(dict.fromkeys(numbers))
 all_mobile_numbers = numbers
 
 print(f"There are {len(numbers)} different telephone numbers in the records.")
