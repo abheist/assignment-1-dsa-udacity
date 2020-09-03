@@ -19,21 +19,16 @@ Print a message:
 "There are <count> different telephone numbers in the records."
 """
 
-data_ = []
-data_.extend(texts)
-data_.extend(calls)
+data_ = set()
 
 
 def getNumbers(all_numbers):
-    numbers = []
     for row in all_numbers:
-        numbers.append(row[0])
-        numbers.append(row[1])
-    return numbers
+        data_.add(row[0])
+        data_.add(row[1])
 
 
-numbers = getNumbers(data_)
-numbers = list(dict.fromkeys(numbers))
-all_mobile_numbers = numbers
+getNumbers(texts)
+getNumbers(calls)
 
-print(f"There are {len(numbers)} different telephone numbers in the records.")
+print(f"There are {len(data_)} different telephone numbers in the records.")
